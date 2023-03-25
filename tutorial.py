@@ -9,7 +9,7 @@ pygame.init()
 pygame.display.set_caption("Parth The Platformer")
 
 WIDTH, HEIGHT = 1000, 800
-FPS = 60
+FPS = 160
 PLAYER_VEL = 5
 
 window = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -55,7 +55,7 @@ def get_block(size):
 
 class Player(pygame.sprite.Sprite):
     COLOR = (255, 0, 0)
-    GRAVITY = 1
+    GRAVITY = 3
     SPRITES = load_sprite_sheets("MainCharacters", "MaskDude", 32, 32, True)
     ANIMATION_DELAY = 3
 
@@ -75,7 +75,7 @@ class Player(pygame.sprite.Sprite):
     def jump(self):
         self.y_vel = -self.GRAVITY * 8
         self.animation_count = 0
-        self.jump_count += 1
+        self.jump_count += 100
         if self.jump_count == 1:
             self.fall_count = 0
 
