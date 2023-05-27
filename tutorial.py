@@ -9,8 +9,8 @@ pygame.init()
 pygame.display.set_caption("Parth The Platformer")
 
 WIDTH, HEIGHT = 1000, 800
-FPS = 160
-PLAYER_VEL = 5
+FPS = 60
+PLAYER_VEL = 10
 
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 
